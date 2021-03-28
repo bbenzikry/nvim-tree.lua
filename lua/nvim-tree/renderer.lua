@@ -281,7 +281,7 @@ local function update_draw_data(tree, depth, markers)
       local icon
       local git_icons
       if special[node.name] then
-        icon = get_special_icon()
+        icon = get_file_icon(node.name, node.extension, index, offset)
         git_icons = get_git_icons(node, index, offset, 0)
         table.insert(hl, {'NvimTreeSpecialFile', index, offset+#git_icons, -1})
       else
